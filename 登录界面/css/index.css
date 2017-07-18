@@ -1,0 +1,124 @@
+a, body, title, header, span, div, p, label, img, input, button, img{
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+    background: #F2F2F2;
+    text-align: center;
+}
+
+/*面板*/
+#panel {
+    display: inline-block;
+    margin-top: 100px;
+    background: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 6px #999;
+    width: 260px;
+}
+
+/*面板头部*/
+#panel .panel-top {
+    font-size: 13px;
+    font-family: Arial;
+    padding: 5px 0px;
+    border-bottom: 1px solid #ddd;
+    margin: 0 auto;
+}
+
+/*面板内容*/
+#panel .panel-content{
+    margin-top: 20px;
+}
+
+#panel .panel-content .int {
+    margin-bottom: 9px;
+    height: 36px;
+    position: relative;
+}
+
+#panel .panel-content .int label {
+    position: absolute;
+    top: 7px;
+    left: 6px;
+}
+
+#panel .panel-content .int input {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #ddd;
+    padding-left: 38px;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+#panel .panel-content .int input:focus {
+    outline: none;
+    border: 1px solid orangered;
+    box-shadow: 0 0 2px orangered;
+}
+
+#panel .panel-content .pwd-login a {
+    color: gray;
+    font-size: 13px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #999;
+}
+
+#panel .panel-content .pwd-login a.pwd-login-right {
+    float: right;
+}
+
+#panel .panel-content .pwd-login a.pwd-login-left{
+    float: left;
+}
+
+#panel .panel-content .pwd-login a.pwd-login-left input{
+    margin-right: 3px;
+}
+
+#panel .panel-content .login button {
+    width: 100%;
+    height: 33px;
+    border: 0;
+    color: white;
+    font-size: 17px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background: orange;
+}
+
+
+#panel .panel-content .reg {
+    /*background: red;*/
+    height: 30px;
+    line-height: 30px;
+    font-size: 13px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+#panel .panel-content .reg a {
+    color: orange;
+    text-decoration: none;
+    margin-left: 3px;
+}
+
+
+/*面板底部*/
+#panel .panel-footer {
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+}
+
+
+#panel .panel-footer img{
+    width: 30px;
+    vertical-align: middle;
+}
