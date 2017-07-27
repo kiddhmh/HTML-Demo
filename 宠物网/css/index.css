@@ -1,0 +1,188 @@
+/*-------导入字体-------*/
+@font-face {
+    font-family: BebasNeue-webfont;
+    src: url('../fonts/BebasNeue-webfont.ttf');
+}
+
+a, address, b, big, blockquote, body, center, cite, code, dd, del, div, dl, dt, em, fieldset, font, form, h1, h2, h3, h4, h5, h6, html, i, iframe, img, ins, label, legend, li, ol, p, pre, small, span, strong, u, ul, var{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background: url("../images/pattern.gif");
+    /* 多处都会用到这个字体,可以统一设置在body中 */
+    font-family: BebasNeue-webfont;
+}
+
+a{
+    text-decoration: none;
+}
+
+/*--------------头部-----------------------*/
+#header{
+    height: 3px;
+    background-color: red;
+}
+
+/*--------------导航-----------------------*/
+#nav{
+    /*background-color: white;*/
+    text-align: center;
+    margin-bottom: 100px;
+}
+
+#nav ul{
+    display: inline-block;
+}
+
+#nav ul li{
+    /*块级标签一旦变为行内-块级标签,多个标签就可以在同一行显示*/
+    display: inline-block;
+}
+
+#nav ul li a{
+    margin: 0 5px;
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+    line-height: 50px;
+    color: white;
+    font-size:30px;
+}
+
+/*--------------伪类-----------*/
+#nav ul li a:hover{
+    background-color: white;
+    color: black;
+}
+
+#nav ul li a.selected{
+    background-color: white;
+    color: black;
+}
+
+/*-------------中间列表-------------------*/
+#list{
+   text-align: center;
+   background-color: white;
+}
+
+#list .love{
+    display: inline-block;
+    width: 382px;
+    text-align: left;
+    padding: 20px;
+}
+
+#list .love p{
+    font-family: 'sans-serif';
+    text-indent: 40px;
+    margin: 5px 0;
+}
+
+#list .love a{
+    display: inline-block;
+    background-color: #C0392B;
+    color: white;
+    width: 120px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 25px;
+    text-align: center;
+}
+
+#list .love a:hover{
+    background-color: black;
+}
+
+
+/*----------------尾部-------------*/
+#footer{
+   margin: 20px 0;
+   text-align: center;
+}
+
+#footer h2{
+   color: white;
+   margin: 5px 0;
+}
+
+#footer ul{
+    display: inline-block;
+}
+
+#footer ul li{
+    display: inline-block;
+}
+
+#footer ul li a{
+    margin: 0 3px;
+}
+
+#footer ul li a:hover{
+    opacity: 0.7;
+}
+
+/*-----------
+
+    响应式设计---适配多尺寸:
+    原理:监听屏幕的最大尺寸,当屏幕缩小或者放大到该尺寸的时候,实现内部的样式改变
+    退出: 高度也是一样的
+
+----------*/
+
+/*最大宽度为1154px*/
+@media screen  and (max-width:1154px){
+    #nav ul li a{
+        width: 150px;
+        font-size:28px;
+    }
+}
+
+/*最大宽度为897px*/
+@media screen  and (max-width:897px){
+    #nav ul li a{
+        width: 120px;
+        font-size:25px;
+    }
+}
+
+/*最大宽度为746px*/
+@media screen  and (max-width:746px){
+    #nav ul li a{
+        width: 80px;
+        font-size:20px;
+    }
+
+    #nav{
+        margin-bottom: 60px;
+    }
+}
+
+/*最大宽度为629px*/
+@media screen  and (max-width:629px){
+    #nav ul li a{
+        width: 65px;
+        font-size:20px;
+        height: 40px;
+        line-height: 40px;
+    }
+
+    #nav{
+        margin-bottom: 30px;
+    }
+
+
+    #list .love{
+        display: inline-block;
+        width: 362px;
+        text-align: left;
+        padding: 20px;
+    }
+
+    #list .love img{
+        width: 355px;
+    }
+}
+
