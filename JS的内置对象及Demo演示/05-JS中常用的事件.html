@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+  <img name="icon" src="image/img_01.jpg">
+
+  <input id="int" type="text" value="我是需要拷贝的内容">
+  <script type="text/javascript">
+      //拿到对应的标签
+      var img = document.getElementsByName('icon')[0];
+//      console.log(img);
+
+      // 常用的事件
+
+      // 当鼠标进入图片
+      img.onmouseover = function(){
+          console.log('手指进入图片');
+      }
+      // 当鼠标在图片上移动
+      img.onmousemove = function(){
+          console.log('当鼠标在图片上移动');
+      }
+      // 当鼠标已出图片
+      img.onmouseout = function(){
+          console.log('当鼠标已出图片');
+      }
+
+      // 当页面加载完毕
+      window.onload = function(){
+//          alert('页面加载完毕');
+      }
+
+      // 拿到对应的输入框
+      var input = document.getElementById('int');
+      input.onfocus = function(){
+          input.width = '700px';
+          input.height = '60px';
+          // css中的属性要通过style
+          input.style.outline = 'none';
+          input.style.fontSize = '30px';
+          input.style.border = '2px solid red';
+      }
+
+      // 拿到选中的内容
+      input.onselect = function(){
+          alert(input.value);
+      }
+  </script>
+</body>
+</html>

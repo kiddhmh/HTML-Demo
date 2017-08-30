@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            background-color: black;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        img{
+            display: none;
+        }
+
+        p{
+            color: red;
+            font-size: 50px;
+            text-shadow: 3px 3px 4px purple;
+            display: none;
+        }
+
+        div{
+            color: red;
+            font-size: 200px;
+        }
+    </style>
+</head>
+<body>
+   <img id="icon" src="image/flower.gif">
+   <p id="word">我对你的爱如滔滔江水.......</p>
+   <div id="times">5</div>
+
+   <script type="text/javascript">
+       // 拿到所有的标签
+       var img = document.getElementById('icon');
+       var p = document.getElementById('word');
+       var div = document.getElementById('times');
+
+       // 倒计时 ms
+     var timer =  setInterval(function(){
+            // 拿到div内部的10
+           div.innerText -= 1;
+           // 判断
+           if(div.innerText == '0'){
+               // 清除计时器
+               clearInterval(timer);
+               // 隐藏div
+               div.style.display = 'none';
+               // 显示图片和文字
+               img.style.display = 'inline-block';
+               p.style.display = 'block';
+           }
+       }, 1000)
+   </script>
+</body>
+</html>
